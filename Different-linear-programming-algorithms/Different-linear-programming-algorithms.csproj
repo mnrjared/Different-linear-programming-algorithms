@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Constraint.cs" />
+    <Compile Include="Core\InputParser.cs" />
+    <Compile Include="Core\LPModel.cs" />
+    <Compile Include="Core\OutputWriter.cs" />
+    <Compile Include="Core\Tableau.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,9 +87,6 @@
     <Folder Include="Algorithms\Knap sack\" />
     <Folder Include="Algorithms\Primal Simplex\" />
     <Folder Include="Algorithms\Sensitivity\" />
-    <Folder Include="Core\IO\" />
-    <Folder Include="Core\Models\" />
-    <Folder Include="Core\Tableau\" />
     <Folder Include="UI\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

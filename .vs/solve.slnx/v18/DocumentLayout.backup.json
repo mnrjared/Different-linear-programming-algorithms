@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Jared\\Documents\\School\\Year 3\\DWH281\\Project\\Testing\\solve\\",
+  "WorkspaceRootPath": "C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|c:\\users\\jared\\documents\\school\\year 3\\dwh281\\project\\testing\\solve\\different-linear-programming-algorithms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|c:\\users\\jared\\documents\\github\\different-linear-programming-algorithms\\different-linear-programming-algorithms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|solutionrelative:different-linear-programming-algorithms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|C:\\Users\\Jared\\Documents\\School\\Year 3\\DWH281\\Project\\Testing\\solve\\different-linear-programming-algorithms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\different-linear-programming-algorithms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|solutionrelative:different-linear-programming-algorithms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -24,9 +24,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Jared\\Documents\\School\\Year 3\\DWH281\\Project\\Testing\\solve\\Different-linear-programming-algorithms\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\Different-linear-programming-algorithms\\Program.cs",
               "RelativeDocumentMoniker": "Different-linear-programming-algorithms\\Program.cs",
-              "ToolTip": "C:\\Users\\Jared\\Documents\\School\\Year 3\\DWH281\\Project\\Testing\\solve\\Different-linear-programming-algorithms\\Program.cs",
+              "ToolTip": "C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\Different-linear-programming-algorithms\\Program.cs",
               "RelativeToolTip": "Different-linear-programming-algorithms\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -37,10 +37,10 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Jared\\Documents\\School\\Year 3\\DWH281\\Project\\Testing\\solve\\Different-linear-programming-algorithms\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\Different-linear-programming-algorithms\\Form1.cs",
               "RelativeDocumentMoniker": "Different-linear-programming-algorithms\\Form1.cs",
               "ToolTip": "C:\\Users\\Jared\\Documents\\School\\Year 3\\DWH281\\Project\\Testing\\solve\\Different-linear-programming-algorithms\\Form1.cs [Design]",
-              "RelativeToolTip": "Different-linear-programming-algorithms\\Form1.cs [Design]",
+              "RelativeToolTip": "..\\..\\School\\Year 3\\DWH281\\Project\\Testing\\solve\\Different-linear-programming-algorithms\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-05T15:16:53.167Z"
             }
