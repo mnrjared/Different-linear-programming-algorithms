@@ -7,23 +7,23 @@
       "RelativeMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|solutionrelative:different-linear-programming-algorithms\\core\\inputparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|c:\\users\\jared\\documents\\github\\different-linear-programming-algorithms\\different-linear-programming-algorithms\\core\\constraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\different-linear-programming-algorithms\\core\\constraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|solutionrelative:different-linear-programming-algorithms\\core\\constraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|c:\\users\\jared\\documents\\github\\different-linear-programming-algorithms\\different-linear-programming-algorithms\\core\\outputwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\different-linear-programming-algorithms\\core\\outputwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|solutionrelative:different-linear-programming-algorithms\\core\\outputwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|c:\\users\\jared\\documents\\github\\different-linear-programming-algorithms\\different-linear-programming-algorithms\\core\\tableau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\different-linear-programming-algorithms\\core\\tableau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|solutionrelative:different-linear-programming-algorithms\\core\\tableau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|c:\\users\\jared\\documents\\github\\different-linear-programming-algorithms\\different-linear-programming-algorithms\\core\\lpmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\different-linear-programming-algorithms\\core\\lpmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|solutionrelative:different-linear-programming-algorithms\\core\\lpmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|c:\\users\\jared\\documents\\github\\different-linear-programming-algorithms\\different-linear-programming-algorithms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\different-linear-programming-algorithms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|solutionrelative:different-linear-programming-algorithms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -50,8 +50,7 @@
               "RelativeToolTip": "Different-linear-programming-algorithms\\Core\\OutputWriter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-08T11:09:07.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-08T11:09:07.613Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "RelativeToolTip": "Different-linear-programming-algorithms\\Core\\Tableau.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-08T11:08:44.493Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-08T11:08:44.493Z"
             },
             {
               "$type": "Document",
@@ -89,8 +87,7 @@
               "RelativeToolTip": "Different-linear-programming-algorithms\\Core\\Constraint.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-08T11:08:28.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-08T11:08:28.535Z"
             },
             {
               "$type": "Document",
@@ -102,8 +99,7 @@
               "RelativeToolTip": "Different-linear-programming-algorithms\\Core\\LPModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-08T11:08:09.532Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-08T11:08:09.532Z"
             },
             {
               "$type": "Document",
@@ -115,8 +111,7 @@
               "RelativeToolTip": "Different-linear-programming-algorithms\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-05T15:17:21.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-05T15:17:21.017Z"
             },
             {
               "$type": "Document",

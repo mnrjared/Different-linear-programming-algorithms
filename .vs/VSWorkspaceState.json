@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Different-linear-programming-algorithms"
+    "\\Different-linear-programming-algorithms",
+    "\\Different-linear-programming-algorithms\\Core"
   ],
-  "SelectedNode": "\\Different-linear-programming-algorithms\\Program.cs",
+  "SelectedNode": "\\Different-linear-programming-algorithms\\Core\\InputParser.cs",
   "PreviewInSolutionExplorer": false
 }
