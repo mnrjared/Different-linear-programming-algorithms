@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\Primal Simplex\PrimalSimplexSolver.cs" />
     <Compile Include="Core\CanonicalFormBuilder.cs" />
     <Compile Include="Core\Constraint.cs" />
     <Compile Include="Core\InputParser.cs" />
@@ -91,7 +92,6 @@
     <Folder Include="Algorithms\Branch And Bound\" />
     <Folder Include="Algorithms\Cutting Plane\" />
     <Folder Include="Algorithms\Knap sack\" />
-    <Folder Include="Algorithms\Primal Simplex\" />
     <Folder Include="Algorithms\Sensitivity\" />
     <Folder Include="UI\" />
   </ItemGroup>

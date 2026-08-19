@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Different_linear_programming_algorithms.Core
 {
-    //to check wether a value is an integer,zero,or negative
+    //to check wether a value is an integer,zero,negative or positive
     internal class NumberHelper
     {
         private const double Epsilon = 1e-6;
@@ -14,6 +14,7 @@ namespace Different_linear_programming_algorithms.Core
         public static bool IsInteger(double value) =>
             Math.Abs(value - Math.Round(value)) < Epsilon;
 
+        public static bool IsPositive(double value) => value > Epsilon;
         public static bool IsZero(double value) => Math.Abs(value) < Epsilon;
 
         public static bool IsNegative(double value) => value < -Epsilon;

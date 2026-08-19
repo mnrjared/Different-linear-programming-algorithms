@@ -21,7 +21,9 @@ namespace Different_linear_programming_algorithms.Core
             }
         }
 
-        //need to check
+        //build intial tableau for algorithms to follow
+        //if building for daul simplex add code to skip the columns with artificail varaibles
+
         public static Tableau Build(LPModel model) 
         {
             int numVars = model.ObjectiveCoefficients.Count;
