@@ -8,8 +8,8 @@ namespace Different_linear_programming_algorithms.Core
 {
     internal class CanonicalFormBuilder
     {
-
         private const double M = 1_000_000;
+
         private static void PriceOutArtificials(Tableau t, int[] basicVariables, int totalCols)
         {
             for (int i = 0; i < basicVariables.Length; i++)
@@ -21,21 +21,58 @@ namespace Different_linear_programming_algorithms.Core
             }
         }
 
-        //build intial tableau for algorithms to follow
-        //if building for daul simplex add code to skip the columns with artificail varaibles
+        // Returns the objective coefficients with sign restrictions already applied
+        // ("-" restricted columns negated). Used by Build() and by Revised Simplex,
+        // so both read the exact same values instead of drifting out of sync.
+        public static double[] GetObjectiveCoefficients(LPModel model)
+        {
+            var objCoeffs = model.ObjectiveCoefficients.ToArray();
+            for (int j = 0; j < objCoeffs.Length; j++)
+            {
+                string restriction = j < model.SignRestrictions.Length ? model.SignRestrictions[j] : "+";
+                if (restriction == "-") objCoeffs[j] = -objCoeffs[j];
+            }
+            return objCoeffs;
+        }
 
-        public static Tableau Build(LPModel model) 
+        //build initial tableau for algorithms to follow
+        public static Tableau Build(LPModel model)
         {
             int numVars = model.ObjectiveCoefficients.Count;
-            int numConstraints = model.Constraints.Count;
 
-            int artificialCount = model.Constraints.Count(c =>
+            var objCoeffs = GetObjectiveCoefficients(model);
+            var workingConstraints = model.Constraints
+                .Select(c => new Constraint((double[])c.Coefficients.Clone(), c.Relation, c.RHS))
+                .ToList();
+
+            for (int j = 0; j < numVars; j++)
+            {
+                string restriction = j < model.SignRestrictions.Length ? model.SignRestrictions[j] : "+";
+
+                if (restriction == "-")
+                {
+                    foreach (var c in workingConstraints)
+                        c.Coefficients[j] = -c.Coefficients[j];
+                }
+                else if (restriction == "bin")
+                {
+                    // enforce the relaxation's upper bound; Branch & Bound still has to
+                    // force the value to exactly 0 or 1 later
+                    var upperBound = new double[numVars];
+                    upperBound[j] = 1;
+                    workingConstraints.Add(new Constraint(upperBound, Relation.LessThanOrEqual, 1));
+                }
+            }
+
+            int numConstraints = workingConstraints.Count;   // includes any injected bin bounds
+
+            int artificialCount = workingConstraints.Count(c =>
                 c.Relation == Relation.GreaterThanOrEqual || c.Relation == Relation.Equal);
 
             int slackColStart = numVars;
             int artificialColStart = numVars + numConstraints;
-            int totalCols = numVars + numConstraints + artificialCount + 1;   // +1 = RHS
-            int totalRows = numConstraints + 1;                              // +1 = z-row
+            int totalCols = numVars + numConstraints + artificialCount + 1;
+            int totalRows = numConstraints + 1;
 
             double[,] matrix = new double[totalRows, totalCols];
             int[] basicVariables = new int[numConstraints];
@@ -44,15 +81,14 @@ namespace Different_linear_programming_algorithms.Core
             for (int j = 0; j < numVars; j++)
                 variableNames[j] = $"x{j + 1}";
 
-            // z-row: negate for max (so Pivot's "optimal when no negatives" rule works uniformly)
             for (int j = 0; j < numVars; j++)
-                matrix[0, j] = model.IsMax ? -model.ObjectiveCoefficients[j] : model.ObjectiveCoefficients[j];
+                matrix[0, j] = model.IsMax ? -objCoeffs[j] : objCoeffs[j];
 
             int artificialIdx = 0;
 
             for (int i = 0; i < numConstraints; i++)
             {
-                var c = model.Constraints[i];
+                var c = workingConstraints[i];
                 for (int j = 0; j < numVars; j++)
                     matrix[i + 1, j] = c.Coefficients[j];
 

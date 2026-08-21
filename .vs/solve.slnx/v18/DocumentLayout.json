@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\different-linear-programming-algorithms\\core\\canonicalformbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|solutionrelative:different-linear-programming-algorithms\\core\\canonicalformbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|c:\\users\\jared\\documents\\github\\different-linear-programming-algorithms\\different-linear-programming-algorithms\\algorithms\\primal simplex\\primalsimplexsolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|solutionrelative:different-linear-programming-algorithms\\algorithms\\primal simplex\\primalsimplexsolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|c:\\users\\jared\\documents\\github\\different-linear-programming-algorithms\\different-linear-programming-algorithms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\different-linear-programming-algorithms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|solutionrelative:different-linear-programming-algorithms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\different-linear-programming-algorithms\\core\\solvedstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|solutionrelative:different-linear-programming-algorithms\\core\\solvedstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|c:\\users\\jared\\documents\\github\\different-linear-programming-algorithms\\different-linear-programming-algorithms\\core\\canonicalformbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|solutionrelative:different-linear-programming-algorithms\\core\\canonicalformbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{994CC286-5D6F-4664-9807-51B40EE3BEEA}|Different-linear-programming-algorithms\\Different-linear-programming-algorithms.csproj|C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\different-linear-programming-algorithms\\core\\numberhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,37 +54,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\Different-linear-programming-algorithms\\Program.cs",
-              "RelativeDocumentMoniker": "Different-linear-programming-algorithms\\Program.cs",
-              "ToolTip": "C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\Different-linear-programming-algorithms\\Program.cs",
-              "RelativeToolTip": "Different-linear-programming-algorithms\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-19T17:16:16.094Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "PrimalSimplexSolver.cs",
               "DocumentMoniker": "C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\Different-linear-programming-algorithms\\Algorithms\\Primal Simplex\\PrimalSimplexSolver.cs",
               "RelativeDocumentMoniker": "Different-linear-programming-algorithms\\Algorithms\\Primal Simplex\\PrimalSimplexSolver.cs",
               "ToolTip": "C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\Different-linear-programming-algorithms\\Algorithms\\Primal Simplex\\PrimalSimplexSolver.cs",
               "RelativeToolTip": "Different-linear-programming-algorithms\\Algorithms\\Primal Simplex\\PrimalSimplexSolver.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA5wDMAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAiwBUAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-19T17:03:43.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "SolvedStatus.cs",
               "DocumentMoniker": "C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\Different-linear-programming-algorithms\\Core\\SolvedStatus.cs",
               "RelativeDocumentMoniker": "Different-linear-programming-algorithms\\Core\\SolvedStatus.cs",
@@ -92,8 +79,7 @@
               "RelativeToolTip": "Different-linear-programming-algorithms\\Core\\SolvedStatus.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwB4AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-16T13:40:33.063Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-16T13:40:33.063Z"
             },
             {
               "$type": "Document",
@@ -109,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\Different-linear-programming-algorithms\\Form1.cs",
               "RelativeDocumentMoniker": "Different-linear-programming-algorithms\\Form1.cs",
@@ -117,8 +103,7 @@
               "RelativeToolTip": "Different-linear-programming-algorithms\\Form1.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-16T11:38:01.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-16T11:38:01.995Z"
             },
             {
               "$type": "Document",
@@ -170,28 +155,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\Different-linear-programming-algorithms\\Form1.cs",
               "RelativeDocumentMoniker": "Different-linear-programming-algorithms\\Form1.cs",
               "ToolTip": "C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\Different-linear-programming-algorithms\\Form1.cs [Design]",
               "RelativeToolTip": "Different-linear-programming-algorithms\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-05T15:16:53.167Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-08-05T15:16:53.167Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "CanonicalFormBuilder.cs",
               "DocumentMoniker": "C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\Different-linear-programming-algorithms\\Core\\CanonicalFormBuilder.cs",
               "RelativeDocumentMoniker": "Different-linear-programming-algorithms\\Core\\CanonicalFormBuilder.cs",
               "ToolTip": "C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\Different-linear-programming-algorithms\\Core\\CanonicalFormBuilder.cs",
               "RelativeToolTip": "Different-linear-programming-algorithms\\Core\\CanonicalFormBuilder.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAApwC4AAABiAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAIwHYAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-19T13:31:34.822Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\Different-linear-programming-algorithms\\Program.cs",
+              "RelativeDocumentMoniker": "Different-linear-programming-algorithms\\Program.cs",
+              "ToolTip": "C:\\Users\\Jared\\Documents\\GitHub\\Different-linear-programming-algorithms\\Different-linear-programming-algorithms\\Program.cs",
+              "RelativeToolTip": "Different-linear-programming-algorithms\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-19T17:16:16.094Z"
             }
           ]
         }
