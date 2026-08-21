@@ -23,7 +23,11 @@ namespace Different_linear_programming_algorithms.Core
                 string restriction = j < model.SignRestrictions.Length ? model.SignRestrictions[j] : "+";
                 values[finalTableau.VarNames[j]] = restriction == "-" ? -raw : raw;
             }
-
+            // This is the ONLY place this sign correction should happen for a given result —
+            // if you're writing Sensitivity or B&B code that reports a z-value, call through
+            // here (or apply this exact same "model.IsMax ? raw : -raw" pattern) at your own
+            // final display boundary, rather than flipping earlier and risking a double-flip
+            // or an inconsistent comparison somewhere upstream.
             double rawZ = finalTableau.GetRHS(0);
             double objective = model.IsMax ? rawZ : -rawZ;   // internal solve always maximises
 

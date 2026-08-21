@@ -6,6 +6,19 @@ using System.Threading.Tasks;
 
 namespace Different_linear_programming_algorithms.Core
 {
+    // For Person 2 IMPORTANT: bound/incumbent comparisons in BranchAndBoundSimplexSolver.cs file must use the raw internal
+    // z-value (tableau.GetRHS(0)) throughout - do NOT call SolutionExtractor.Extract
+    // mid-algorithm. The internal solve always maximises (min problems are solved as
+    // max w = -z), so "higher internal z is better" holds consistently for every node
+    // regardless of whether the original problem was max or min. Only decode the FINAL
+    // winning incumbent through SolutionExtractor, once, right before displaying it.
+    // See CanonicalFormBuilder.cs and SolutionExtractor.cs for where this convention
+    // originates and where it gets corrected.
+
+    // For Person 3 IMPORTANT: the dual model has the OPPOSITE objective type from the primal -
+    // dualModel.IsMax = !primalModel.IsMax. This doesn't fall out of reusing the
+    // primal's Tableau automatically; it has to be set explicitly when constructing
+    // the dual as its own LPModel.
     internal class CanonicalFormBuilder
     {
         private const double M = 1_000_000;
@@ -81,6 +94,13 @@ namespace Different_linear_programming_algorithms.Core
             for (int j = 0; j < numVars; j++)
                 variableNames[j] = $"x{j + 1}";
 
+            // z-row: negate for max (so Pivot's "optimal when no negatives" rule works uniformly)
+            // NOTE FOR EVERYONE: min problems are secretly solved internally as max w = -z.
+            // Every raw z-value read from a Tableau (GetRHS(0)) is in this internal convention -
+            // only flip it to the real objective value at the point of DISPLAYING a result to
+            // the user (see SolutionExtractor). Never flip mid-algorithm - B&B's incumbent
+            // comparisons and Sensitivity's calculations must stay in this internal convention
+            // throughout, or bound comparisons silently break for min problems.
             for (int j = 0; j < numVars; j++)
                 matrix[0, j] = model.IsMax ? -objCoeffs[j] : objCoeffs[j];
 

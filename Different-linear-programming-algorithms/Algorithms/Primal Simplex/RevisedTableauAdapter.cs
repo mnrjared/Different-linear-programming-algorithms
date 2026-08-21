@@ -29,6 +29,12 @@ namespace Different_linear_programming_algorithms.Algorithms.Primal_Simplex
             for (int j = 0; j < n; j++)
                 matrix[0, j] = iteration.ReducedCosts[j];
 
+            
+            double z = 0;
+            for (int i = 0; i < m; i++)
+                z += iteration.Y[i] * initial.Matrix[i + 1, n];
+            matrix[0, n] = z;
+
             return new Tableau(matrix, (int[])iteration.Basis.Clone(), initial.VarNames);
         }
     }
