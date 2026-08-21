@@ -47,23 +47,40 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\Primal Simplex\PrimalSimplexSolver.cs" />
+    <Compile Include="Algorithms\Primal Simplex\RevisedPrimalSimplexSolver.cs" />
+    <Compile Include="Algorithms\Primal Simplex\RevisedTableauAdapter.cs" />
     <Compile Include="Core\CanonicalFormBuilder.cs" />
     <Compile Include="Core\Constraint.cs" />
     <Compile Include="Core\InputParser.cs" />
     <Compile Include="Core\LPModel.cs" />
     <Compile Include="Core\NumberHelper.cs" />
     <Compile Include="Core\OutputWriter.cs" />
+    <Compile Include="Core\Solution.cs" />
+    <Compile Include="Core\SolutionExtractor.cs" />
     <Compile Include="Core\SolvedStatus.cs" />
     <Compile Include="Core\Tableau.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="UI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="UI\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <Compile Include="UI\IAlgorithmTab.cs" />
+    <Compile Include="UI\PrimalSimplexControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PrimalSimplexControl.Designer.cs">
+      <DependentUpon>PrimalSimplexControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TableauView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\TableauView.Designer.cs">
+      <DependentUpon>TableauView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -75,6 +92,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\PrimalSimplexControl.resx">
+      <DependentUpon>PrimalSimplexControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TableauView.resx">
+      <DependentUpon>TableauView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,7 +116,6 @@
     <Folder Include="Algorithms\Cutting Plane\" />
     <Folder Include="Algorithms\Knap sack\" />
     <Folder Include="Algorithms\Sensitivity\" />
-    <Folder Include="UI\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
