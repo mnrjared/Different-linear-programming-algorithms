@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\daul simplex\DualSimplexAlgorithm.cs" />
     <Compile Include="Algorithms\Primal Simplex\PrimalSimplexSolver.cs" />
     <Compile Include="Algorithms\Primal Simplex\RevisedPrimalSimplexSolver.cs" />
     <Compile Include="Algorithms\Primal Simplex\RevisedTableauAdapter.cs" />
