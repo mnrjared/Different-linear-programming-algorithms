@@ -46,7 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Algorithms\daul simplex\DualSimplexAlgorithm.cs" />
+    <Compile Include="Algorithms\Branch And Bound\BranchAndBoundSimplexSolver.cs" />
+    <Compile Include="Algorithms\daul simplex\DualSimplexSolver.cs" />
     <Compile Include="Algorithms\Primal Simplex\PrimalSimplexSolver.cs" />
     <Compile Include="Algorithms\Primal Simplex\RevisedPrimalSimplexSolver.cs" />
     <Compile Include="Algorithms\Primal Simplex\RevisedTableauAdapter.cs" />
@@ -113,7 +114,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Algorithms\Branch And Bound\" />
     <Folder Include="Algorithms\Cutting Plane\" />
     <Folder Include="Algorithms\Knap sack\" />
     <Folder Include="Algorithms\Sensitivity\" />

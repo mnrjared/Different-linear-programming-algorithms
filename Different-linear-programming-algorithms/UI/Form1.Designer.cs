@@ -32,8 +32,9 @@
             this.lblFileName = new System.Windows.Forms.Label();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.primalSimplexControl1 = new Different_linear_programming_algorithms.UI.PrimalSimplexControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.TabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +62,7 @@
             // 
             this.TabControl.Controls.Add(this.tabPage1);
             this.TabControl.Controls.Add(this.tabPage2);
+            this.TabControl.Controls.Add(this.tabPage3);
             this.TabControl.Location = new System.Drawing.Point(12, 12);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
@@ -78,6 +80,13 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // primalSimplexControl1
+            // 
+            this.primalSimplexControl1.Location = new System.Drawing.Point(-4, 0);
+            this.primalSimplexControl1.Name = "primalSimplexControl1";
+            this.primalSimplexControl1.Size = new System.Drawing.Size(617, 593);
+            this.primalSimplexControl1.TabIndex = 0;
+            // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -88,12 +97,15 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // primalSimplexControl1
+            // tabPage3
             // 
-            this.primalSimplexControl1.Location = new System.Drawing.Point(-4, 0);
-            this.primalSimplexControl1.Name = "primalSimplexControl1";
-            this.primalSimplexControl1.Size = new System.Drawing.Size(617, 593);
-            this.primalSimplexControl1.TabIndex = 0;
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(613, 588);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -120,6 +132,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private UI.PrimalSimplexControl primalSimplexControl1;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }
 

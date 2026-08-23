@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Different_linear_programming_algorithms.Algorithms.daul_simplex
 {
-    internal class DualSimplexAlgorithm
+    internal class DualSimplexSolver
     {
 
 
