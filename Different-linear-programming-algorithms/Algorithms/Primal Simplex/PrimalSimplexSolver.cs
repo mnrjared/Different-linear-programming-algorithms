@@ -38,7 +38,7 @@ namespace Different_linear_programming_algorithms.Algorithms.Primal_Simplex
             {
                 return new SolvedStatus(
                     SolverStatus.Infeasible,
-                    "An artificial variable remains basic with a nonzero value — model is infeasible.",
+                    "An artificial variable remains basic with a nonzero value - model is infeasible.",
                     current);
             }
 

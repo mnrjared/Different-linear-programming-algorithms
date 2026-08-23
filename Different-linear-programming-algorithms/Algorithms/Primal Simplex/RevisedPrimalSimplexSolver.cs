@@ -43,12 +43,22 @@ namespace Different_linear_programming_algorithms.Algorithms.Primal_Simplex
             double[] cost = new double[n];
             for (int j = 0; j < n; j++)
             {
-                if (j < objCoeffs.Length)
-                    cost[j] = model.IsMax ? objCoeffs[j] : -objCoeffs[j];
-                else if (initial.VarNames[j].StartsWith("a"))
+                string name = initial.VarNames[j];
+                if (name.StartsWith("a"))
+                {
                     cost[j] = -M;
+                }
+                else if (name.StartsWith("x"))
+                {
+                    bool isNegativePart = name.EndsWith("-");
+                    int varIndex = int.Parse(name.Substring(1).TrimEnd('+', '-')) - 1;
+                    double coeff = model.IsMax ? objCoeffs[varIndex] : -objCoeffs[varIndex];
+                    cost[j] = isNegativePart ? -coeff : coeff;
+                }
                 else
+                {
                     cost[j] = 0;
+                }
             }
 
             int[] basis = (int[])initial.BasicVar.Clone();
@@ -94,7 +104,7 @@ namespace Different_linear_programming_algorithms.Algorithms.Primal_Simplex
 
             if (HasNonZeroArtificial(finalTableau))
                 return new SolvedStatus(SolverStatus.Infeasible,
-                    "An artificial variable remains basic with a nonzero value — model is infeasible.", finalTableau);
+                    "An artificial variable remains basic with a nonzero value - model is infeasible.", finalTableau);
 
             return new SolvedStatus(SolverStatus.Optimal, "Optimal solution found.", finalTableau);
         }

@@ -77,14 +77,25 @@ namespace Different_linear_programming_algorithms.Core
                 }
             }
 
-            int numConstraints = workingConstraints.Count;   // includes any injected bin bounds
+            // urs variables get split into two non-negative columns: x = x+ - x-
+            var positiveCol = new int[numVars];
+            var negativeCol = new int[numVars];
+            int decisionColumnCount = 0;
+            for (int j = 0; j < numVars; j++)
+            {
+                string restriction = j < model.SignRestrictions.Length ? model.SignRestrictions[j] : "+";
+                positiveCol[j] = decisionColumnCount++;
+                negativeCol[j] = restriction == "urs" ? decisionColumnCount++ : -1;
+            }
 
+            int numConstraints = workingConstraints.Count;
+            int slackSurplusCount = workingConstraints.Count(c => c.Relation != Relation.Equal);
             int artificialCount = workingConstraints.Count(c =>
                 c.Relation == Relation.GreaterThanOrEqual || c.Relation == Relation.Equal);
 
-            int slackColStart = numVars;
-            int artificialColStart = numVars + numConstraints;
-            int totalCols = numVars + numConstraints + artificialCount + 1;
+            int slackColStart = decisionColumnCount;
+            int artificialColStart = decisionColumnCount + slackSurplusCount;
+            int totalCols = decisionColumnCount + slackSurplusCount + artificialCount + 1;
             int totalRows = numConstraints + 1;
 
             double[,] matrix = new double[totalRows, totalCols];
@@ -92,8 +103,18 @@ namespace Different_linear_programming_algorithms.Core
             string[] variableNames = new string[totalCols - 1];
 
             for (int j = 0; j < numVars; j++)
-                variableNames[j] = $"x{j + 1}";
-
+            {
+                string restriction = j < model.SignRestrictions.Length ? model.SignRestrictions[j] : "+";
+                if (restriction == "urs")
+                {
+                    variableNames[positiveCol[j]] = $"x{j + 1}+";
+                    variableNames[negativeCol[j]] = $"x{j + 1}-";
+                }
+                else
+                {
+                    variableNames[positiveCol[j]] = $"x{j + 1}";
+                }
+            }
             // z-row: negate for max (so Pivot's "optimal when no negatives" rule works uniformly)
             // NOTE FOR EVERYONE: min problems are secretly solved internally as max w = -z.
             // Every raw z-value read from a Tableau (GetRHS(0)) is in this internal convention -
@@ -102,43 +123,57 @@ namespace Different_linear_programming_algorithms.Core
             // comparisons and Sensitivity's calculations must stay in this internal convention
             // throughout, or bound comparisons silently break for min problems.
             for (int j = 0; j < numVars; j++)
-                matrix[0, j] = model.IsMax ? -objCoeffs[j] : objCoeffs[j];
+            {
+                double coeff = model.IsMax ? -objCoeffs[j] : objCoeffs[j];
+                matrix[0, positiveCol[j]] = coeff;
+                if (negativeCol[j] != -1)
+                    matrix[0, negativeCol[j]] = -coeff;
+            }
 
+            int slackSurplusIdx = 0;
             int artificialIdx = 0;
 
             for (int i = 0; i < numConstraints; i++)
             {
                 var c = workingConstraints[i];
                 for (int j = 0; j < numVars; j++)
-                    matrix[i + 1, j] = c.Coefficients[j];
-
-                int slackCol = slackColStart + i;
+                {
+                    matrix[i + 1, positiveCol[j]] = c.Coefficients[j];
+                    if (negativeCol[j] != -1)
+                        matrix[i + 1, negativeCol[j]] = -c.Coefficients[j];
+                }
 
                 switch (c.Relation)
                 {
                     case Relation.LessThanOrEqual:
-                        variableNames[slackCol] = $"s{i + 1}";
-                        matrix[i + 1, slackCol] = 1;
-                        basicVariables[i] = slackCol;
-                        break;
-
+                        {
+                            int slackCol = slackColStart + slackSurplusIdx++;
+                            variableNames[slackCol] = $"s{i + 1}";
+                            matrix[i + 1, slackCol] = 1;
+                            basicVariables[i] = slackCol;
+                            break;
+                        }
                     case Relation.GreaterThanOrEqual:
-                        variableNames[slackCol] = $"e{i + 1}";
-                        matrix[i + 1, slackCol] = -1;
-                        int artCol1 = artificialColStart + artificialIdx++;
-                        variableNames[artCol1] = $"a{i + 1}";
-                        matrix[i + 1, artCol1] = 1;
-                        basicVariables[i] = artCol1;
-                        matrix[0, artCol1] = M;
-                        break;
-
+                        {
+                            int surplusCol = slackColStart + slackSurplusIdx++;
+                            variableNames[surplusCol] = $"e{i + 1}";
+                            matrix[i + 1, surplusCol] = -1;
+                            int artCol1 = artificialColStart + artificialIdx++;
+                            variableNames[artCol1] = $"a{i + 1}";
+                            matrix[i + 1, artCol1] = 1;
+                            basicVariables[i] = artCol1;
+                            matrix[0, artCol1] = M;
+                            break;
+                        }
                     case Relation.Equal:
-                        int artCol2 = artificialColStart + artificialIdx++;
-                        variableNames[artCol2] = $"a{i + 1}";
-                        matrix[i + 1, artCol2] = 1;
-                        basicVariables[i] = artCol2;
-                        matrix[0, artCol2] = M;
-                        break;
+                        {
+                            int artCol2 = artificialColStart + artificialIdx++;
+                            variableNames[artCol2] = $"a{i + 1}";
+                            matrix[i + 1, artCol2] = 1;
+                            basicVariables[i] = artCol2;
+                            matrix[0, artCol2] = M;
+                            break;
+                        }
                 }
 
                 matrix[i + 1, totalCols - 1] = c.RHS;
