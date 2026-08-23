@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Different-linear-programming-algorithms",
-    "\\Different-linear-programming-algorithms\\Core"
+    "\\Different-linear-programming-algorithms\\Core",
+    "\\Different-linear-programming-algorithms\\UI"
   ],
-  "SelectedNode": "\\solve.slnx",
+  "SelectedNode": "\\Different-linear-programming-algorithms\\UI\\PrimalSimplexControl.cs",
   "PreviewInSolutionExplorer": false
 }

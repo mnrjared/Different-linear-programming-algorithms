@@ -76,6 +76,18 @@ namespace Different_linear_programming_algorithms.Core
                     workingConstraints.Add(new Constraint(upperBound, Relation.LessThanOrEqual, 1));
                 }
             }
+            foreach (var c in workingConstraints)
+            {
+                if (c.RHS < 0)
+                {
+                    for (int k = 0; k < c.Coefficients.Length; k++)
+                        c.Coefficients[k] = -c.Coefficients[k];
+                    c.RHS = -c.RHS;
+                    c.Relation = c.Relation == Relation.LessThanOrEqual ? Relation.GreaterThanOrEqual
+                               : c.Relation == Relation.GreaterThanOrEqual ? Relation.LessThanOrEqual
+                               : Relation.Equal;
+                }
+            }
 
             // urs variables get split into two non-negative columns: x = x+ - x-
             var positiveCol = new int[numVars];
