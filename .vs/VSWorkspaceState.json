@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Different-linear-programming-algorithms",
+    "\\Different-linear-programming-algorithms\\Algorithms",
+    "\\Different-linear-programming-algorithms\\Algorithms\\Branch And Bound",
     "\\Different-linear-programming-algorithms\\Core",
     "\\Different-linear-programming-algorithms\\UI"
   ],
-  "SelectedNode": "\\Different-linear-programming-algorithms\\Core\\NumberHelper.cs",
+  "SelectedNode": "\\Different-linear-programming-algorithms\\Algorithms\\Branch And Bound\\BranchAndBoundSimplexSolver.cs",
   "PreviewInSolutionExplorer": false
 }

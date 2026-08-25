@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Different_linear_programming_algorithms.Algorithms.daul_simplex
+namespace Different_linear_programming_algorithms.Algorithms.dual_simplex
 {
     internal class DualSimplexSolver
     {
