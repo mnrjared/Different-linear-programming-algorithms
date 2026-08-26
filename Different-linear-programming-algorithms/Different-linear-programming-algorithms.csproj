@@ -50,6 +50,10 @@
     <Compile Include="Algorithms\Cutting Plane\CuttingPlaneSolver.cs" />
     <Compile Include="Algorithms\daul simplex\DualSimplexSolver.cs" />
     <Compile Include="Algorithms\Duality\DualityHelper.cs" />
+    <Compile Include="Algorithms\Knap sack\BranchAndBoundKnapsackSolver.cs" />
+    <Compile Include="Algorithms\Knap sack\KnapsackItem.cs" />
+    <Compile Include="Algorithms\Knap sack\KnapsackNode.cs" />
+    <Compile Include="Algorithms\Knap sack\KnapsackResult.cs" />
     <Compile Include="Algorithms\Primal Simplex\PrimalSimplexSolver.cs" />
     <Compile Include="Algorithms\Primal Simplex\RevisedPrimalSimplexSolver.cs" />
     <Compile Include="Algorithms\Primal Simplex\RevisedTableauAdapter.cs" />
@@ -82,6 +86,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\IAlgorithmTab.cs" />
+    <Compile Include="UI\KnapsackControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\KnapsackControl.Designer.cs">
+      <DependentUpon>KnapsackControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\PrimalSimplexControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -109,12 +119,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\KnapsackControl.resx">
+      <DependentUpon>KnapsackControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\PrimalSimplexControl.resx">
       <DependentUpon>PrimalSimplexControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TableauView.resx">
       <DependentUpon>TableauView.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include=".vs\Different-linear-programming-algorithms.csproj.dtbcache.json" />
+    <None Include="bin\Debug\Different-linear-programming-algorithms.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -129,7 +144,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Algorithms\Knap sack\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Different-linear-programming-algorithms.exe" />
+    <Content Include="bin\Debug\Different-linear-programming-algorithms.pdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -150,6 +150,8 @@ namespace Different_linear_programming_algorithms.Algorithms.Duality
                 Relation relation;
                 if (restriction == "urs")
                     relation = Relation.Equal;
+                else if (restriction == "-")
+                    relation = primal.IsMax ? Relation.LessThanOrEqual : Relation.GreaterThanOrEqual;
                 else
                     relation = primal.IsMax ? Relation.GreaterThanOrEqual : Relation.LessThanOrEqual;
 

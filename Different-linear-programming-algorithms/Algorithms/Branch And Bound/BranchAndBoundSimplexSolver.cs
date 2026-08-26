@@ -69,12 +69,14 @@ namespace Different_linear_programming_algorithms.Algorithms.BranchAndBound
 
                 if (node.Bound <= bestBound || node.Depth > MaxDepth)
                 {
+                    node.Status = NodeStatus.Pruned;
                     PrunedNodes++;
                     continue;   // fathomed: can't beat the current best
                 }
 
                 if (IsIntegerFeasible(node.Tableau, model))
                 {
+                    node.Status = NodeStatus.IntegerFeasible;
                     if (node.Bound > bestBound)
                     {
                         bestBound = node.Bound;
@@ -86,6 +88,7 @@ namespace Different_linear_programming_algorithms.Algorithms.BranchAndBound
                 int branchCol = FindMostFractionalColumn(node.Tableau, model, out int branchRow, out double branchValue);
                 if (branchCol == -1)
                 {
+                    node.Status = NodeStatus.Pruned;
                     PrunedNodes++;
                     continue;
                 }

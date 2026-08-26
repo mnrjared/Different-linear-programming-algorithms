@@ -11,3 +11,4 @@ C:\Users\Jared\Documents\GitHub\Different-linear-programming-algorithms\Differen
 C:\Users\Jared\Documents\GitHub\Different-linear-programming-algorithms\Different-linear-programming-algorithms\obj\Debug\Different-linear-programming-algorithms.exe
 C:\Users\Jared\Documents\GitHub\Different-linear-programming-algorithms\Different-linear-programming-algorithms\obj\Debug\Different-linear-programming-algorithms.pdb
 C:\Users\Jared\Documents\GitHub\Different-linear-programming-algorithms\Different-linear-programming-algorithms\obj\Debug\Different_linear_programming_algorithms.UI.BranchAndBoundControl.resources
+C:\Users\Jared\Documents\GitHub\Different-linear-programming-algorithms\Different-linear-programming-algorithms\obj\Debug\Different_linear_programming_algorithms.UI.KnapsackControl.resources
