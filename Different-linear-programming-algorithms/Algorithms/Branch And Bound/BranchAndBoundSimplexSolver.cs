@@ -9,14 +9,18 @@ using Different_linear_programming_algorithms.Algorithms.daul_simplex;
 
 namespace Different_linear_programming_algorithms.Algorithms.BranchAndBound
 {
+    internal enum NodeStatus { Explored, Pruned, IntegerFeasible }
     internal class BnBNode
     {
         public Tableau Tableau { get; set; }
-        public double Bound { get; set; }   // internal (always-maximise) z-value - higher is always better,
-                                            // regardless of whether the original model was max or min
+        public double Bound { get; set; }
         public int Depth { get; set; }
         public string BranchDescription { get; set; }
+        public BnBNode Parent { get; set; }
+        public NodeStatus Status { get; set; } = NodeStatus.Explored;
     }
+
+   
 
     internal class BranchAndBoundSimplexSolver
     {
@@ -121,7 +125,8 @@ namespace Different_linear_programming_algorithms.Algorithms.BranchAndBound
                 Tableau = result.FinalTableau,
                 Bound = result.FinalTableau.GetRHS(0),
                 Depth = parent.Depth + 1,
-                BranchDescription = description
+                BranchDescription = description,
+                Parent = parent
             });
         }
 

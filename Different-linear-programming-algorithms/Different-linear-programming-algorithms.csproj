@@ -64,6 +64,12 @@
     <Compile Include="Core\SolutionExtractor.cs" />
     <Compile Include="Core\SolvedStatus.cs" />
     <Compile Include="Core\Tableau.cs" />
+    <Compile Include="UI\BranchAndBoundControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\BranchAndBoundControl.Designer.cs">
+      <DependentUpon>BranchAndBoundControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\CuttingPlaneControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     <Compile Include="UI\TableauView.Designer.cs">
       <DependentUpon>TableauView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\BranchAndBoundControl.resx">
+      <DependentUpon>BranchAndBoundControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

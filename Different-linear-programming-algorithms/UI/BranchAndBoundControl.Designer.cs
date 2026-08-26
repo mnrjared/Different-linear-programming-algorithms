@@ -1,6 +1,6 @@
 ﻿namespace Different_linear_programming_algorithms.UI
 {
-    partial class PrimalSimplexControl
+    partial class BranchAndBoundControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,88 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbAlgorithm = new System.Windows.Forms.ComboBox();
             this.btnSolve = new System.Windows.Forms.Button();
-            this.btnPrev = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
+            this.treeViewNodes = new System.Windows.Forms.TreeView();
+            this.tableauView1 = new Different_linear_programming_algorithms.UI.TableauView();
             this.dgvSolution = new System.Windows.Forms.DataGridView();
             this.btnSaveResults = new System.Windows.Forms.Button();
-            this.tableauView1 = new Different_linear_programming_algorithms.UI.TableauView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolution)).BeginInit();
             this.SuspendLayout();
             // 
-            // cmbAlgorithm
-            // 
-            this.cmbAlgorithm.FormattingEnabled = true;
-            this.cmbAlgorithm.Location = new System.Drawing.Point(822, 43);
-            this.cmbAlgorithm.Name = "cmbAlgorithm";
-            this.cmbAlgorithm.Size = new System.Drawing.Size(121, 21);
-            this.cmbAlgorithm.TabIndex = 0;
-            // 
             // btnSolve
             // 
-            this.btnSolve.Location = new System.Drawing.Point(843, 122);
+            this.btnSolve.Location = new System.Drawing.Point(543, 176);
             this.btnSolve.Name = "btnSolve";
             this.btnSolve.Size = new System.Drawing.Size(75, 23);
-            this.btnSolve.TabIndex = 1;
+            this.btnSolve.TabIndex = 0;
             this.btnSolve.Text = "Solve";
             this.btnSolve.UseVisualStyleBackColor = true;
             // 
-            // btnPrev
+            // treeViewNodes
             // 
-            this.btnPrev.Location = new System.Drawing.Point(763, 170);
-            this.btnPrev.Name = "btnPrev";
-            this.btnPrev.Size = new System.Drawing.Size(75, 23);
-            this.btnPrev.TabIndex = 2;
-            this.btnPrev.Text = "Previous";
-            this.btnPrev.UseVisualStyleBackColor = true;
+            this.treeViewNodes.Location = new System.Drawing.Point(32, 20);
+            this.treeViewNodes.Name = "treeViewNodes";
+            this.treeViewNodes.Size = new System.Drawing.Size(201, 179);
+            this.treeViewNodes.TabIndex = 1;
             // 
-            // btnNext
+            // tableauView1
             // 
-            this.btnNext.Location = new System.Drawing.Point(923, 170);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
-            this.btnNext.TabIndex = 3;
-            this.btnNext.Text = "Next";
-            this.btnNext.UseVisualStyleBackColor = true;
+            this.tableauView1.Location = new System.Drawing.Point(32, 208);
+            this.tableauView1.Name = "tableauView1";
+            this.tableauView1.Size = new System.Drawing.Size(896, 357);
+            this.tableauView1.TabIndex = 2;
             // 
             // dgvSolution
             // 
             this.dgvSolution.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSolution.Location = new System.Drawing.Point(12, 32);
+            this.dgvSolution.Location = new System.Drawing.Point(260, 20);
             this.dgvSolution.Name = "dgvSolution";
-            this.dgvSolution.Size = new System.Drawing.Size(717, 240);
-            this.dgvSolution.TabIndex = 4;
+            this.dgvSolution.Size = new System.Drawing.Size(240, 150);
+            this.dgvSolution.TabIndex = 3;
             // 
             // btnSaveResults
             // 
-            this.btnSaveResults.Location = new System.Drawing.Point(843, 217);
+            this.btnSaveResults.Location = new System.Drawing.Point(709, 179);
             this.btnSaveResults.Name = "btnSaveResults";
             this.btnSaveResults.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveResults.TabIndex = 5;
+            this.btnSaveResults.TabIndex = 4;
             this.btnSaveResults.Text = "Save";
             this.btnSaveResults.UseVisualStyleBackColor = true;
             // 
-            // tableauView1
-            // 
-            this.tableauView1.Location = new System.Drawing.Point(12, 287);
-            this.tableauView1.Name = "tableauView1";
-            this.tableauView1.Size = new System.Drawing.Size(1013, 285);
-            this.tableauView1.TabIndex = 6;
-            // 
-            // PrimalSimplexControl
+            // BranchAndBoundControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tableauView1);
             this.Controls.Add(this.btnSaveResults);
             this.Controls.Add(this.dgvSolution);
-            this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.btnPrev);
+            this.Controls.Add(this.tableauView1);
+            this.Controls.Add(this.treeViewNodes);
             this.Controls.Add(this.btnSolve);
-            this.Controls.Add(this.cmbAlgorithm);
-            this.Name = "PrimalSimplexControl";
-            this.Size = new System.Drawing.Size(1392, 593);
+            this.Name = "BranchAndBoundControl";
+            this.Size = new System.Drawing.Size(1132, 585);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolution)).EndInit();
             this.ResumeLayout(false);
 
@@ -117,12 +94,10 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmbAlgorithm;
         private System.Windows.Forms.Button btnSolve;
-        private System.Windows.Forms.Button btnPrev;
-        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.TreeView treeViewNodes;
+        private TableauView tableauView1;
         private System.Windows.Forms.DataGridView dgvSolution;
         private System.Windows.Forms.Button btnSaveResults;
-        private TableauView tableauView1;
     }
 }
