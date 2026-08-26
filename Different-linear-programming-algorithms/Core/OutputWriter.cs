@@ -57,6 +57,10 @@ namespace Different_linear_programming_algorithms.Core
             _sb.AppendLine($"ERROR: {message}");
         }
 
+        // Free-form text block. Needed by the Duality report, which has no tableau to write,
+        // and useful for Branch and Bound's node log.
+        public void WriteText(string text) => _sb.AppendLine(text);
+
         public string GetContent() => _sb.ToString();
 
         public void SaveToFile(string path) => File.WriteAllText(path, _sb.ToString());

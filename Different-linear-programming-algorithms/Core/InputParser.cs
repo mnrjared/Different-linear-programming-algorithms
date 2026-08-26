@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 
 namespace Different_linear_programming_algorithms.Core
 {
     internal class InputParser
     {
+        private static double ParseNumber(string token)
+        {
+            return double.Parse(token, CultureInfo.InvariantCulture);
+        }
         public InputParser() { }
         public static LPModel Parse(string[] lines) 
         {
@@ -18,7 +23,7 @@ namespace Different_linear_programming_algorithms.Core
 
             model.IsMax = objTokens[0].Equals("max", StringComparison.OrdinalIgnoreCase);
 
-            model.ObjectiveCoefficients = objTokens.Skip(1).Select(double.Parse).ToList();
+            model.ObjectiveCoefficients = objTokens.Skip(1).Select(ParseNumber).ToList();
 
             int numVariables = model.ObjectiveCoefficients.Count;
 
@@ -26,7 +31,7 @@ namespace Different_linear_programming_algorithms.Core
             {
                 string[] tokens = lines[i].Trim().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-                double[] coefficients = tokens.Take(numVariables).Select(double.Parse).ToArray();
+                double[] coefficients = tokens.Take(numVariables).Select(ParseNumber).ToArray();
 
                 string relationToken = tokens[numVariables];
 
@@ -37,17 +42,17 @@ namespace Different_linear_programming_algorithms.Core
                 if (relationToken.StartsWith("<=")) 
                 {
                     relation = Relation.LessThanOrEqual;
-                    rhs = double.Parse(relationToken.Substring(2)); 
+                    rhs = ParseNumber(relationToken.Substring(2)); 
                 }
                 else if (relationToken.StartsWith(">=")) 
                 {
                     relation = Relation.GreaterThanOrEqual;
-                    rhs = double.Parse(relationToken.Substring(2)); 
+                    rhs = ParseNumber(relationToken.Substring(2)); 
                 }
                 else if (relationToken.StartsWith("=")) 
                 { 
                     relation = Relation.Equal; 
-                    rhs = double.Parse(relationToken.Substring(1)); 
+                    rhs = ParseNumber(relationToken.Substring(1)); 
                 }
                 else throw new FormatException($"Unrecognized relation in line: {lines[i]}");
 

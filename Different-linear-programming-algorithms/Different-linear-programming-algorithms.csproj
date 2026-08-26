@@ -47,10 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\Branch And Bound\BranchAndBoundSimplexSolver.cs" />
-    <Compile Include="Algorithms\dual simplex\DualSimplexSolver.cs" />
+    <Compile Include="Algorithms\Cutting Plane\CuttingPlaneSolver.cs" />
+    <Compile Include="Algorithms\daul simplex\DualSimplexSolver.cs" />
+    <Compile Include="Algorithms\Duality\DualityHelper.cs" />
     <Compile Include="Algorithms\Primal Simplex\PrimalSimplexSolver.cs" />
     <Compile Include="Algorithms\Primal Simplex\RevisedPrimalSimplexSolver.cs" />
     <Compile Include="Algorithms\Primal Simplex\RevisedTableauAdapter.cs" />
+    <Compile Include="Algorithms\Sensitivity\SensitivityAnalyser.cs" />
     <Compile Include="Core\CanonicalFormBuilder.cs" />
     <Compile Include="Core\Constraint.cs" />
     <Compile Include="Core\InputParser.cs" />
@@ -61,6 +64,9 @@
     <Compile Include="Core\SolutionExtractor.cs" />
     <Compile Include="Core\SolvedStatus.cs" />
     <Compile Include="Core\Tableau.cs" />
+    <Compile Include="UI\CuttingPlaneControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,9 +120,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Algorithms\Cutting Plane\" />
     <Folder Include="Algorithms\Knap sack\" />
-    <Folder Include="Algorithms\Sensitivity\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
